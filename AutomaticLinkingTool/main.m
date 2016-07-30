@@ -49,7 +49,6 @@ static BOOL ListLinkerOptionCommands(NSString *inputPath) {
         NSLog(@"Fail to read Mach-O header.");
         return NO;
     }
-    //NSRange headerRange = NSMakeRange(headerStartPosition, position - headerStartPosition);
 
     BOOL isSwiftObject = NO;
     NSMutableArray<NSString *> *automaticLinkingOptionStrings = [[NSMutableArray alloc] initWithCapacity:header.ncmds];
@@ -72,7 +71,6 @@ static BOOL ListLinkerOptionCommands(NSString *inputPath) {
                     return NO;
                 }
 
-                //NSUInteger linkerOptionStringStartPosition = position;
                 NSMutableArray<NSString *> *linkerOptionStrings = [[NSMutableArray alloc] initWithCapacity:linkerOptionCommand.count];
                 for (uint32_t count = 0; count < linkerOptionCommand.count; count++) {
                     static uint8_t const nullByte = 0x00;
