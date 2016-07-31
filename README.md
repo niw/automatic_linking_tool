@@ -11,11 +11,11 @@ DESCRIPTION
 
 Recent Apple's `ld(1)` and `clang(1)` or `swiftc(1)` supports automatic linking that embeds required linker flags into Mach-O binary file by parsing `@import` or `import` module syntax in the source code and eliminates `-framework` or `-l` linker flags when linking these object files.
 
-However, when linking the project that has both Swift and Objective-C objects, it may be in trobule with unexpected linker flags or missing nessesary linker flags caused by the automatic linking.
+However, when linking the project that has both Swift and Objective-C objects, it may be in trouble with unexpected linker flags or missing necessary linker flags caused by the automatic linking.
 
-This command checkes the object file to look up all such implicit linker options to investiagte the actual linker options given to `ld(1)`.
+This command checks the object file to look up all such implicit linker options to investigate the actual linker options given to `ld(1)`.
 
-Equavalent command is like `otool -l | grep -A 4 LC_LINKER_OPTION`.
+Equivalent command is like `otool -l | grep -A 4 LC_LINKER_OPTION`.
 
 SYNOPSIS
 --------
@@ -29,7 +29,7 @@ SYNOPSIS
 USAGE
 -----
 
-The output is formatted in JSON strcuture, which is formatted in next syntax.
+The output is formatted in JSON structure, which is formatted in next syntax.
 
     {
       "is_swift_object": true,
