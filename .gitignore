@@ -6,9 +6,5 @@
 *.xcscmblueprint
 .DS_Store
 .idea/
-.repocheck/
-DerivedData/
-build/
-buildResults/
 project.xcworkspace
 xcuserdata/
